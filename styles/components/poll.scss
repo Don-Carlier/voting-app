@@ -1,0 +1,82 @@
+.answer {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type='text'] {
+    width: 100%;
+    background: #fff;
+    color: #525865;
+    border-radius: 4px;
+    border: 1px solid $border-grey;
+    box-shadow: inset 1px 2px 8px rgba(0, 0, 0, .07);
+    font-family: inherit;
+    font-size: 1em;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    padding: .5em 1em .5em;
+    transition: .18s ease-out;
+    margin-bottom: 16px;
+
+    &:hover {
+        box-shadow: inset 1px 2px 8px rgba(0, 0, 0, .02);
+    }
+
+    &:focus {
+        color: #4b515d;
+        border: 1px solid #B8B6B6;
+        box-shadow: inset 1px 2px 4px rgba(0, 0, 0, .01), 0px 0px 8px rgba(0, 0, 0, .2);
+    }
+}
+
+::-webkit-input-placeholder { /* Edge */
+    color: $placeholder-color;
+}
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $placeholder-color;
+}
+
+::placeholder {
+    color: $placeholder-color;
+}
+
+input[type='button'] {
+    border-radius: 4px;
+    border: 1px solid $border-grey;
+    font-size: 1em;
+    height: 40px;
+    outline: none;
+    padding: .5em 1em .5em;
+
+    &:hover {
+        cursor: pointer;
+    }
+        
+    &:focus {
+        color: #4b515d;
+        border: 1px solid #B8B6B6;
+        box-shadow: inset 1px 2px 4px rgba(0, 0, 0, .01), 0px 0px 8px rgba(0, 0, 0, .2);
+    }
+}
+
+ul, ul li {
+    list-style: none;
+    input[type='text'] {
+        width: 50%;
+    }
+}
+
+
+.poll__footer {
+    height: 56px;
+    width: calc(100% + 32px);
+    border-top: 1px solid $border-grey;
+    margin-top: 8px;
+    padding-top: 8px;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+}

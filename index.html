@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting APP</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body id="color-mode">
+    <header class="header">
+      <div class="header__title">
+        Voting app
+      </div>
+    </header>
+    
+    <main>
+      <div id="poll">
+        <input id="poll-question" type="text" class="question" placeholder="What is the meaning of life?" maxlength="80" value=""/>
+        
+        <ul id="answer-options" class="answers-options">
+          <li class="answer">
+            <input type="text" placeholder="answer option" maxlength="80" name="answer-input" id="answer-input-1" onkeyup="enableBtn(event)" />
+            <input type="button" value="Add" onclick="addQuestion(event)" id="answer-btn-1" disabled/>
+          </li>
+        </ul>
+        <div class="poll__footer">
+          <div class="counter">
+            <span id="answer-amount">1</span>/10 possible answers
+          </div>
+          <input type="button" value="reset" onClick="window.location.reload();"/>
+        </div>
+        
+      </div>
+
+      <div id="vote">
+        <span id='vote-question'>To vote, please define your question and at least 2 answer options.</span>
+        <ul id="votes" class="votes">
+          <li class="vote hidden">
+            <input type="radio" value="vote" id="1" name="vote"/>
+            <label id="vote-label-1" for="vote">vote1</label>
+          </li>
+        </ul>
+        <div class="vote__footer">
+          <input class="vote__btn hidden" type="button" id="vote-btn" value="Vote" onclick="submitVote()" />
+        </div>
+      </div>
+
+      <div id="chart">
+        <div id="hidden-data">
+          <div id="array-answers"></div>
+          <div id="array-votes"></div>
+        </div>
+        <div id="chart-intro">
+          Waiting for votes to come in...
+        </div>
+        <div id="chart-wrap" class="hidden">
+          
+          <canvas id="myChart"></canvas>
+        </div>
+        
+      </div>
+
+
+
+
+    </main>
+  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="src/js/poll.js"></script>
+
+</body>
+</html>

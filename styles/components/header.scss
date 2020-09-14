@@ -1,0 +1,20 @@
+.header {
+    border-bottom: 1px solid $border-grey;
+    background: white;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+
+    &__title {
+        font-size: 20px;
+        font-weight: bold;
+        align-self: center;
+        margin: auto 8px;
+        height: 38px;
+        line-height:38px;
+        text-align: center;
+    }
+}
+

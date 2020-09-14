@@ -1,0 +1,27 @@
+#vote-question {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.vote {
+    display: flex;
+    justify-content: space-between;
+    height: 42px;
+    line-height: 42px;
+    margin-bottom: 16px;
+
+    input[type='radio'] {
+        height:40px;
+    }
+}
+
+.vote__footer {
+    height: 56px;
+    border-top: 1px solid $border-grey;
+    margin-top: 8px;
+    padding-top: 8px;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
